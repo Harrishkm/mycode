@@ -15,7 +15,7 @@ resource "docker_image" "nginx" {
 }
 
 resource "docker_container" "nginx" {
-  image = docker_image.nginx.latest
+  image = docker_image.nginx.image_id
   # here we removed the name "tutorial" for the container
   # and replace it with a call to a variable
   # name  = "tutorial"
